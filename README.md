@@ -1,2 +1,3 @@
 # Intro-To-Arduino
-Basic codes written while learnig Arduino
+This is self-learn repository og code written while learning Arduino and Arduino IDE
+Language used- C/C++
