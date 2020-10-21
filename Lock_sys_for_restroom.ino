@@ -1,7 +1,7 @@
 /*
 By Mishkat
 Using Photoresistor, Servo motor and led (red and green)
-A basic lock system for restroom which is climate-friendly
+A basic lock system for restroom which is eco-friendly
 The door locks automatically through servo motor when light
 is switched on, while a red led shows that it is occupied.
 And it reverts back to initial stage when the light is switched off.
