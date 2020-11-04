@@ -37,4 +37,3 @@ Serial.print(speedofSoundKhr);
 Serial.println(" Kilometer per hour");
 delay(500);
 }
-}
