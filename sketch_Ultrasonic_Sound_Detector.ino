@@ -8,8 +8,7 @@ int echoPin=11;
 float targetDistance=6;
 float pingTime;
 float speedOfSound;
-float speedOfSoundkmhr;
-float speedOfSoundmhr;
+float speedofSoundKhr;
 void setup()
 {
 Serial.begin(9600);
@@ -24,17 +23,18 @@ delayMicroseconds(2000);
 digitalWrite(trigPin, HIGH);
 delayMicroseconds(20);
 digitalWrite(trigPin, LOW);
+  
 pingTime=pulseIn(echoPin, HIGH);
 speedOfSound=(2*targetDistance)/pingTime;
-speedOfSoundkmhr=91.44*speedOfSound;
-speedOfSoundmhr=56.8182*speedOfSound;
-Serial.print("Pingtime is ");
-Serial.println(pingTime);
-Serial.print("Speed of sound is ");
-Serial.print(speedOfSoundkmhr);
-Serial.println(" Kms per hour");
-Serial.print("Speed of sound is ");
-Serial.print(speedOfSoundmhr);
+  
+speedOfSound=(speedOfSound/63360);
+speedOfSound=(speedOfSound*1000000);
+speedOfSound=speedOfSound*3600;
+Serial.print("The speed of sound is ");
+Serial.print(speedOfSound);
 Serial.println(" miles per hour");
-
+Serial.print(speedofSoundKhr);
+Serial.println(" Kilometer per hour");
+delay(500);
+}
 }
